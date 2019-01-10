@@ -12,6 +12,8 @@ namespace bdm {
 //stem cells divide and grow into TA cells
 enum Substances {calcium};
 
+//First type of cell: Stem cells
+//Stem cells will divide and grow to produce TA cells
 struct StemCell : public BaseBiology {
   StemCell() : BaseBiologyModule(gAllEventIds){}
 
@@ -27,7 +29,7 @@ struct StemCell : public BaseBiology {
 
   }
 
-}
+};
 
 //TA cells
 struct TransitAmplifying : public BaseBiology {
@@ -42,12 +44,24 @@ struct TransitAmplifying : public BaseBiology {
 
   }
 
-}
+};
 
-//Dendritic cells
-struct DendriticCell : public BaseBiology {
+//Differentiated cells
+struct DifferentiatedCell : public BaseBiology {
+  DifferentiatedCell() : BaseBiologyModule(gAllEventIds){}
+};
 
-}
+//create a basement membrane along with the dermis
+// BM should look like sine waves (best fit to actual data)
+//Q: would i want to actually separate out dermis and BM?
+struct BasementMembrane : public BaseBiology {
+  BasementMembrane() : BaseBiologyModule(gAllEventIds){}
+};
 
+struct Dermis : public BaseBiology {
+
+};
+
+//From the basement membrane, cytokine are released into the environment
 
 }

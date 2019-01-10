@@ -15,6 +15,7 @@
 #define EPIDERMIS_PROJ_H_
 
 #include "biodynamo.h"
+#include "epidermis_biology_modules.h"
 
 namespace bdm {
 
